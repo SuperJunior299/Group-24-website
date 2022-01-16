@@ -1,0 +1,478 @@
+section {
+    padding: 40px;
+    min-height: 100vh;
+}
+.toggle{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #000 url("./My Own Portfolio img/menu.png");
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1000;
+}
+.toggle.active{
+    background: #000 url("./My Own Portfolio img/close.png");
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section{
+    padding: 100px;
+    min-height: 100vh;
+}
+.banner{
+    position: relative;
+    width: 100%;
+}
+.banner .section-imgSideBar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 100%;
+}
+.banner .section-imgSideBar-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .section-contentBox{
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* If you want to calculate the pos of content, please use CALC */
+    width: calc(100% - 500px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+.banner .section-contentBox__logoText{
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #333;
+    color: #fff;
+    padding: 0 5px;
+}
+.banner .section-contentBox__content{
+
+}
+.banner .section-contentBox__content-header{
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 300;
+}
+.banner .section-contentBox__content-header .section-contentBox__content-header-span{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.banner .section-contentBox__content-header-name{
+    font-family: 'Azonix', sans-serif;
+    font-size: 3em;
+    color: #333;
+    line-height: 1.2em;
+    margin-top: 34px;
+}
+.banner .section-contentBox__content-introduction{
+    font-family: 'SF Mono', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 20px 0;
+    line-height: 2.2em;
+    opacity: 0.6;
+    letter-spacing: 0.05rem;
+}
+/* ====-============================= SIDEBAR / NAVIGATION ====================================== */
+
+.sideBar{
+    position: fixed;
+    top: 0;
+    left: 34.5%;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    z-index: 100;
+    display: none;
+}
+.sideBar.active{
+    display: block;
+    animation: slideRightToLeft .5s;
+    
+}
+@keyframes slideRightToLeft{
+    from{
+        right: -100%;
+    }
+    to{
+        right: 0;
+    }
+}
+.sideBar .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 35%;
+}
+.sideBar .menu .menu__list{
+    list-style: none;
+}
+.sideBar .menu .menu__list-link{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 2em;
+    font-weight: 300;    
+    margin: 10px 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.sideBar .menu .menu__list-link:hover{
+    color: var(--primary-color);
+}
+/* ====-============================= SOCIAL MEDIA ====================================== */
+.social-media{
+    position: absolute;
+    left: 61.5%;
+    top: 195%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-media .social-media__list{
+    margin-right: 10px;
+    list-style: none;
+}
+.social-media .social-media__list-link{
+
+}
+.social-media .social-media__list-img{
+    transform: scale(0.5);
+    opacity: 0.7;
+}
+.social-media .social-media__list-img:hover{
+    opacity: 1;
+}
+
+
+/* ====-============================= SERVICES ====================================== */
+.services{
+    display: flex;
+    align-items: center;
+    line-height: 40px;
+    flex-direction: column;
+    background-color: #000000;
+}
+.section-title{
+    
+}
+.section-title__content{
+}
+.section-services__content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.section-services__content-serviceBox{
+    /* padding: 40px 20px; */
+    max-width: 340px;
+    margin: 20px;
+    transition: 0.5s;
+    text-align: center;
+    /* background: #f5f5f5; */
+}
+.section-services__content-serviceBox-img:hover{
+    transform: scale(1.2); 
+    cursor: pointer;   
+}
+.section-services__content-serviceBox-img{
+    max-width: 220px;
+    transition: 0.5s;
+}
+/* .section-services__content-serviceBox:hover .section-services__content-serviceBox-img{
+    filter: invert(1);
+} */
+.section-services__content-serviceBox-header{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: italic;
+    transition: 0.5s;
+    color: var(--text-color-2);
+}
+/* .section-services__content-serviceBox:hover .section-services__content-serviceBox-header{
+    color: var(--text-color-2);
+} */
+.section-services__content-serviceBox-detailedInformation{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2em; 
+    /* opacity: 0.8; */
+    letter-spacing: 0.05rem;
+    margin-top: 10px;
+    text-align: justify;
+}
+/* .section-services__content-serviceBox:hover .section-services__content-serviceBox-detailedInformation{
+    color: var(--text-color-2);
+} */
+
+
+/* ====-============================= CONTACT ====================================== */
+.copyRight{
+    color: var(--text-color-2);
+    background: #111;
+    text-align: center;
+    padding: 10px;
+}
+.copyRight__content{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 990px) {
+    .banner .section-imgSideBar{
+        display: none; 
+    }
+    /* .banner .section-imgSideBar .section-imgSideBar-img{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) !important;
+    } */
+    .banner .section-contentBox, .sideBar{
+        width: 100%; 
+        padding: 40px;
+    }
+    .sideBar{
+        position: fixed;
+        inset: 0;
+    }
+    .banner .section-contentBox__logoText{
+        left: 42px;
+    }
+    .social-media{
+        position: absolute;
+        left: 42.8%;
+        display: flex;
+    }
+    /* .social-media::before{
+        content: "";
+        position: absolute;
+        display: block;
+        top: 100px;
+        left: -8px;
+        width: 300px;
+        height: 4px;
+        background: #000;
+        margin: auto;
+    } */
+    .toggle{
+        right: 40px;
+    }
+
+    .sideBar .menu .menu__list .menu__list-link{
+        font-size: 1.4rem;
+    }
+
+    /* .section-contentBox__content-header .section-contentBox__content-header-name,
+    .section-contentBox__content-introduction{
+        color: var(--text-color-2);
+    }  */
+}
+
+/* Modal Boostrap Tab */
+
+.modal{
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 5, 5, 0.4);
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal.open{
+    display: flex;
+}
+.modal-container{
+    display: inline-block;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    min-height: 450px;
+    width: calc(100%-60px);
+    animation: loginFormEaseIn ease 0.5s;
+}
+.modal-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 1000000;
+}
+.modal-close:hover{
+    opacity: 0.6;
+}
+.modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.modal-body{
+    position: absolute;
+    top: 18%;
+    left: 4%;
+    padding: 16px;
+}
+.modal-label{
+    display: block;
+    margin-bottom: 12px;
+}
+.modal-input{
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 12px;
+    width: 430px;
+}
+.forgot-pw{
+    display: block;
+    color: #41aeee;
+    text-decoration: none;
+    margin-top: -8px;
+}
+.login-btn{
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 16px;
+    width: 100%;
+    border: none;
+    margin-top: 24px;
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+}
+.login-btn:hover{
+    opacity: 0.8;
+}
+.member-signup{
+    padding: 24px 100px;
+}
+.member-signup a{
+    text-decoration: none;
+    color: #41aeee;
+}
+@keyframes loginFormEaseIn{
+    from{
+      opacity: 0;
+      transform: translateY(-140px);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+@media (max-width: 500px){
+    .services .section-services__content .section-services__content-serviceBox,
+    .work .section-work__content .section-work__content-workBox{
+        max-width: 100%;
+        width: 100%;
+        margin: 10px 0;
+    }
+    .social-media {
+        position: absolute;
+        left: 32.8%;
+        top: 113%;
+        display: flex;
+    }
+    .services{
+        margin-top: 10px;
+    }
+    .banner{
+        margin-top: 40px;
+    }
+    .banner .section-contentBox__content-header-name{
+        transform: translateY(20px);
+    }
+}
+
+/* TEAM PROFILE INFORMATION IN ASSIGNMENT 3 */
+.section-teamProfile{
+
+}
+.section-teamProfile-mainHeading{
+    
+}
+.section-teamProfile-heading{
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif !important; 
+
+}
+.section-teamProfile-teamname{
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+.section-teamProfile-subHeading{
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+.section-teamProfile-information{
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+.section-teamProfile-ultraSubHeading{
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+.section-teamProfile-content{
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 2em;
+
+}
+.section-teamProfile-roleList-item{
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 2em;
+}
